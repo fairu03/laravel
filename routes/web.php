@@ -22,3 +22,6 @@ Route::get('/test', function () {
 Route::get('/halo/{nama}', function ($nama) {
     return view('halo', ["nama" => $nama]);
 });
+
+Route::get('/form', 'RegisterController@form');
+Route::post('/sapa', 'RegisterController@sapa');
