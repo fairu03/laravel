@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/test', function () {
-    return "ok";
+    return view('test');
+});
+
+Route::get('/halo/{nama}', function ($nama) {
+    return view('halo', ["nama" => $nama]);
 });
